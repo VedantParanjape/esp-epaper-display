@@ -178,6 +178,7 @@ int Epd::LDirInit(void)
 }
 
 
+
 /**
  *  @brief: module reset.
  *          often used to awaken the module in deep sleep,
