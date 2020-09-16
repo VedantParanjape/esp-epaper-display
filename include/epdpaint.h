@@ -38,6 +38,10 @@
 
 #include "fonts.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 class Paint {
 public:
     Paint(unsigned char* image, int width, int height);
@@ -68,6 +72,9 @@ private:
     int height;
     int rotate;
 };
+#ifdef __cplusplus
+}
+#endif
 
 #endif
 

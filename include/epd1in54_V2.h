@@ -31,7 +31,6 @@
 #ifndef epd1in54_V2_H
 #define epd1in54_V2_H
 
-#include "epdif.h"
 
 // Display resolution
 #define EPD_WIDTH       200
@@ -39,6 +38,12 @@
 
 #define HIGH 1
 #define LOW 0
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#include "epdif.h"
 
 class Epd : EpdIf
 {
@@ -80,6 +85,9 @@ private:
 	void SetMemoryArea(int x_start, int y_start, int x_end, int y_end);
 	void SetMemoryPointer(int x, int y);
 };
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* EPD1IN54B_H */
 

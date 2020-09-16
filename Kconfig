@@ -35,3 +35,5 @@ config BUSY_PIN
     default 25
     help
         set the pin to be connected to busy pin of display
+
+endmenu

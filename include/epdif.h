@@ -46,6 +46,10 @@
 #define RST_PIN   CONFIG_RST_PIN         
 #define BUSY_PIN  CONFIG_BUSY_PIN        
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 class EpdIf {
 public:
     EpdIf(void);
@@ -57,5 +61,8 @@ public:
     static void DelayMs(unsigned int delaytime);
     static void SpiTransfer(unsigned char data);
 };
+#ifdef __cplusplus
+}
+#endif
 
 #endif
