@@ -23,9 +23,15 @@
 <img src="https://img.shields.io/github/repo-size/VedantParanjape/esp-epaper-display">
 </p>
 
+<p align="center">
+<img src="assets/output_o3.gif">
+</p>
+
 # ESP32 Epaper Display component
 ESP-IDF Component for driving waveshare's epaper displays. This is a port of Waveshare's official code for driving epaper display.     
 * [1.54" V2 module](https://www.waveshare.com/wiki/1.54inch_e-Paper_Module)  
+
+
 
 ## Installation
 
@@ -52,6 +58,8 @@ idf.py menuconfig
 
 ## Example code
 
+Example app: https://github.com/VedantParanjape/esp-component-examples/tree/master/esp-epaper-example
+
 ```c
 #include "epaper.h"
 #include "esp_log.h"
@@ -59,9 +67,7 @@ idf.py menuconfig
 #include "freertos/task.h"
 #include "driver/timer.h"
 
-static const char * kEPDTAG = "EPD";
 
-Epd epd;
 unsigned long time_start_ms;
 unsigned long time_now_s;
 
@@ -70,15 +76,18 @@ unsigned long time_now_s;
 
 extern "C" void app_main() 
 {
+  Epd epd;
+
   unsigned char* frame_ = (unsigned char*)malloc(epd.width * epd.height / 8);
 
   Paint paint_(frame_, epd.width, epd.height);
   paint_.Clear(UNCOLORED);
 
-  ESP_LOGI(kEPDTAG, "e-Paper init and clear");
+  ESP_LOGI("EPD", "e-Paper init and clear");
   epd.LDirInit();
   epd.Clear();
 
+  vTaskDelay(2000);
   int d = 3;
   for (char i = '0'; i <= '9'; i++)
   {
@@ -89,6 +98,8 @@ extern "C" void app_main()
   }
   epd.Sleep();
 }
+
+
 ```
 
 # Credits
