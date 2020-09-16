@@ -1,0 +1,21 @@
+.config
+*.o
+build
+sdkconfig.old
+
+# emacs
+.dir-locals.el
+
+# emacs temp file suffixes
+*~
+.#*
+\#*#
+
+# eclipse setting
+.settings
+
+# MacOS directory files
+.DS_Store
+
+# VSCode settings
+./vscode
