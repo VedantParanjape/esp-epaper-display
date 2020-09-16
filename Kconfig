@@ -7,7 +7,7 @@ choice
         "Select waveshare's epaper display to be used"
 
     config EPD_1_54_V2
-        bool "1.54\" V2 Display"
+        bool "1.54\" V2 Display Module"
     
     config EPD_2_13_D
         bool "2.13\" D Display"

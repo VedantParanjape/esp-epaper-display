@@ -30,7 +30,7 @@
 # ESP32 Epaper Display component
 ESP-IDF Component for driving waveshare's epaper displays. This is a port of Waveshare's official code for driving epaper display.     
 * [1.54" V2 module](https://www.waveshare.com/wiki/1.54inch_e-Paper_Module)  
-
+* [2.13" D Display](https://www.waveshare.com/wiki/2.13inch_e-Paper_HAT_(D))
 
 
 ## Installation
@@ -50,11 +50,23 @@ component folder must contain `epaper` component
 
 ## Configuration
 
-Set the pins used in menuconfig
+Set the pins used and appropriate display module used in menuconfig
 
 ```bash
 idf.py menuconfig
 ```
+
+Setting present at: `Component config -->  E-Paper display configuration`
+
+#### Pin setting
+Path: `Component config -->  E-Paper display configuration`
+
+![](assets/pin_config.png)
+
+#### Display model setting
+Path: `Component config -->  E-Paper display configuration --> Display Type`
+
+![](assets/display_model_config.png)
 
 ## Example code
 
@@ -103,5 +115,5 @@ extern "C" void app_main()
 ```
 
 # Credits
-* Thanks to ayoy, this code is based on this [repository](https://github.com/ayoy/esp32-waveshare-epd)
-* Thanks to waveshare for sharing [arduino codes](https://github.com/waveshare/e-Paper/tree/master/Arduino) for epaper display
+* Thanks to [ayoy](https://github.com/ayoy), Adapted the code for other display models using this [project](https://github.com/ayoy/esp32-waveshare-epd).
+* Thanks to waveshare for sharing [arduino codes](https://github.com/waveshare/e-Paper/tree/master/Arduino) for epaper displays.
