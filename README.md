@@ -29,8 +29,17 @@
 
 # ESP32 Epaper Display component
 ESP-IDF Component for driving waveshare's epaper displays. This is a port of Waveshare's official code for driving epaper display.     
-* [1.54" V2 module](https://www.waveshare.com/wiki/1.54inch_e-Paper_Module)  
-* [2.13" D Display](https://www.waveshare.com/wiki/2.13inch_e-Paper_HAT_(D))
+* [ ] [1.02" D module](https://www.waveshare.com/wiki/1.02inch_e-paper_Module)    
+* [x] [1.54" V2 module](https://www.waveshare.com/wiki/1.54inch_e-Paper_Module)   
+* [ ] [1.54" B module](https://www.waveshare.com/wiki/1.54inch_e-Paper_Module_(B))    
+* [ ] [1.54" C module](https://www.waveshare.com/wiki/1.54inch_e-Paper_Module_(C))    
+* [ ] [2.13" V2 module](https://www.waveshare.com/wiki/2.13inch_e-Paper_HAT)    
+* [ ] [2.13" B module](https://www.waveshare.com/wiki/2.13inch_e-Paper_HAT_(B))   
+* [ ] [2.13" C module](https://www.waveshare.com/wiki/2.13inch_e-Paper_HAT_(C))   
+* [x] [2.13" D module](https://www.waveshare.com/wiki/2.13inch_e-Paper_HAT_(D))   
+* [ ] [2.66" module](https://www.waveshare.com/wiki/2.66inch_e-Paper_Module)    
+* [ ] [2.7" module](https://www.waveshare.com/wiki/2.7inch_e-Paper_HAT)   
+* [ ] [2.7" B module](https://www.waveshare.com/wiki/2.7inch_e-Paper_HAT_(B))   
 
 
 ## Installation
@@ -78,10 +87,6 @@ Example app: https://github.com/VedantParanjape/esp-component-examples/tree/mast
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "driver/timer.h"
-
-
-unsigned long time_start_ms;
-unsigned long time_now_s;
 
 #define COLORED     0
 #define UNCOLORED   1
