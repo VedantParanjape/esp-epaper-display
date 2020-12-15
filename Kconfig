@@ -11,6 +11,9 @@ choice
     
     config EPD_2_13_D
         bool "2.13\" D Display"
+
+	config EPD_2_7
+        bool "2.7\" Display"	
 endchoice
 
 config MOSI_PIN
