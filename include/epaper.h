@@ -11,6 +11,10 @@
 #include "epd2in13d.h"
 #endif
 
+#ifdef CONFIG_EPD_2_7
+#include "epd2in7.h"
+#endif
+
 #include "epdpaint.h"
 
 #endif
