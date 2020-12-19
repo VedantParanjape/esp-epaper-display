@@ -38,7 +38,7 @@ ESP-IDF Component for driving waveshare's epaper displays. This is a port of Wav
 * [ ] [2.13" C module](https://www.waveshare.com/wiki/2.13inch_e-Paper_HAT_(C))   
 * [x] [2.13" D module](https://www.waveshare.com/wiki/2.13inch_e-Paper_HAT_(D))   
 * [ ] [2.66" module](https://www.waveshare.com/wiki/2.66inch_e-Paper_Module)    
-* [ ] [2.7" module](https://www.waveshare.com/wiki/2.7inch_e-Paper_HAT)   
+* [x] [2.7" module](https://www.waveshare.com/wiki/2.7inch_e-Paper_HAT)   
 * [ ] [2.7" B module](https://www.waveshare.com/wiki/2.7inch_e-Paper_HAT_(B))   
 
 
