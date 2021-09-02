@@ -47,6 +47,9 @@
 #define RST_PIN   CONFIG_RST_PIN         
 #define BUSY_PIN  CONFIG_BUSY_PIN        
 
+// SPI host
+#define SPI_HOST    HSPI_HOST
+
 #ifdef __cplusplus
 extern "C" {
 #endif
