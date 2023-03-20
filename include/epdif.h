@@ -37,7 +37,9 @@
 #define BUSY_PIN  CONFIG_BUSY_PIN        
 
 // SPI host
-// #define HSPI_HOST    HHSPI_HOST
+#if ESP_IDF_VERSION_MAJOR < 4
+#define SPI_HOST    HSPI_HOST
+#endif
 
 #ifdef __cplusplus
 extern "C" {
