@@ -28,17 +28,6 @@
 #ifndef EPDIF_H
 #define EPDIF_H
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include "esp_log.h"
-#include "freertos/FreeRTOS.h"
-#include "freertos/task.h"
-#include "esp_system.h"
-#include "driver/spi_master.h"
-#include "soc/gpio_struct.h"
-#include "driver/gpio.h"
-
 // Pin definition
 #define MOSI_PIN  CONFIG_MOSI_PIN        
 #define CLK_PIN   CONFIG_CLK_PIN         
@@ -48,7 +37,7 @@
 #define BUSY_PIN  CONFIG_BUSY_PIN        
 
 // SPI host
-#define SPI_HOST    HSPI_HOST
+// #define HSPI_HOST    HHSPI_HOST
 
 #ifdef __cplusplus
 extern "C" {
