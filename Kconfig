@@ -1,0 +1,55 @@
+menu "E-Paper display configuration"
+
+choice 
+    prompt "Display Type"
+    default EPD_1_54_V2
+    help
+        "Select waveshare's epaper display to be used"
+
+    config EPD_1_54_V2
+        bool "1.54\" V2 Display Module"
+    
+    config EPD_2_13_D
+        bool "2.13\" D Display"
+
+	config EPD_2_7
+        bool "2.7\" Display"	
+endchoice
+
+config MOSI_PIN
+    int "DATAIN (MOSI/DIN) Pin number"
+    default 14
+    help
+        set the pin to be connected to mosi/din pin of display
+
+config CLK_PIN
+    int "CLOCK (CLK/SCK) Pin number"
+    default 13
+    help
+        set the pin to be connected to clk/sck pin of display
+
+config CS_PIN
+    int "CHIPSELECT (CS) Pin number"
+    default 15
+    help
+        set the pin to be connected to cs pin of display
+
+config DC_PIN
+    int "DATA/COMMAND (DC) Pin number"
+    default 27
+    help
+        set the pin to be connected to dc pin of display
+
+config RST_PIN
+    int "RESET (RST) Pin number"
+    default 26
+    help
+        set the pin to be connected to rst pin of display
+
+config BUSY_PIN
+    int "BUSY (BUSY) Pin number"
+    default 25
+    help
+        set the pin to be connected to busy pin of display
+
+endmenu

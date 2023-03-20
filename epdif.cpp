@@ -83,7 +83,9 @@ int EpdIf::IfInit(void) {
         
 	}
 	
-    // spi_bus_free(HSPI_HOST); -> This generates error on ESP-IDF >= v4.2
+#if ESP_IDF_VERSION_MAJOR < 4
+    spi_bus_free(SPI_HOST); // This generates error on ESP-IDF >= v4.2
+#endif
 
     gpio_config_t io_conf = {};
     io_conf.intr_type = GPIO_INTR_DISABLE;
@@ -113,7 +115,11 @@ int EpdIf::IfInit(void) {
     buscfg.quadhd_io_num = -1;
 
     //Initialize the SPI bus
-    ret=spi_bus_initialize(HSPI_HOST, &buscfg, 0);
+    #if ESP_IDF_VERSION_MAJOR >= 4
+        ret=spi_bus_initialize(HSPI_HOST, &buscfg, 0);
+    #else
+        ret=spi_bus_initialize(SPI_HOST, &buscfg, 0);
+    #endif
     switch (ret) {
         case ESP_ERR_INVALID_ARG:
             ESP_LOGE("EPDIF", "INVALID ARG");
@@ -140,7 +146,12 @@ int EpdIf::IfInit(void) {
     devcfg.queue_size = 1;
 
     //Attach the EPD to the SPI bus
-    ret=spi_bus_add_device(HSPI_HOST, &devcfg, &spi);
+    #if ESP_IDF_VERSION_MAJOR >= 4
+        ret=spi_bus_add_device(HSPI_HOST, &devcfg, &spi);
+    #else
+        ret=spi_bus_add_device(SPI_HOST, &devcfg, &spi);
+    #endif
+    
     assert(ret==ESP_OK);
 
     return 0;
