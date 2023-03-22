@@ -28,6 +28,19 @@
 #
 ******************************************************************************/
 #include <stdlib.h>
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "esp_system.h"
+#include "driver/spi_master.h"
+#include "soc/gpio_struct.h"
+#include "driver/gpio.h"
+#include "esp_log.h"
+
 #include "epd2in13d.h"
 
 /**
