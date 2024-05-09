@@ -59,7 +59,7 @@ int EpdIf::DigitalRead(unsigned int pin) {
 }
 
 void EpdIf::DelayMs(unsigned int delaytime) {
-    vTaskDelay(delaytime / portTICK_RATE_MS);
+    vTaskDelay(delaytime / portTICK_PERIOD_MS);
 }
 
 void EpdIf::SpiTransfer(unsigned char data) {
