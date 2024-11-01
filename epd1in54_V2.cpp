@@ -162,12 +162,12 @@ int Epd::LDirInit(void)
   SendCommand(0x44);
   /* x point must be the multiple of 8 or the last 3 bits will be ignored */
   SendData((0 >> 3) & 0xFF);
-  SendData((200 >> 3) & 0xFF);
+  SendData((199 >> 3) & 0xFF);
   SendCommand(0x45);
   SendData(0 & 0xFF);
   SendData((0 >> 8) & 0xFF);
-  SendData(200 & 0xFF);
-  SendData((200 >> 8) & 0xFF);
+  SendData(199 & 0xFF);
+  SendData((199 >> 8) & 0xFF);
 
 	SendCommand(0x3C); //BorderWavefrom
 	SendData(0x01);
